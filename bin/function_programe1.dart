@@ -259,6 +259,188 @@
 //   obj.display();
 // }
 
+// multileval inheritance
+// class Car{
+//     String?name;
+//     int?price;}
+// class Tesla extends Car{
+//     void display(){
+//         print("name:$name");
+//         print("price:$price");
+//     }
+// }
+// class Modle3 extends Tesla{
+//     String?color;
+// void display(){
+// super.display();
+//     print("color:$color");
+// }
+// }
+// void main(){
+//     Modle3 obj=Modle3();
+//     obj.name="BMW";
+//     obj.price=670000;
+//     obj.color="black";
+//     obj.display();
+// }
 
+// hireachial inheritance
 
+// class Shape{
+//     double?diameter1;
+//     double?diameter2;
+// }
+// class Rectangle extends Shape{
+//     double area(){
+//         return diameter1! * diameter2!;
+//     }
+// }
+// class Triangle extends Shape{
+//     double area(){
+//         return 0.5 * diameter1! * diameter2!;
+//     }
+// }
+// void main(){
+// Rectangle r=Rectangle();
+//     r.diameter1=10;
+//     r.diameter2=5;
+//     print("area of the reactangle is ${r.area()}");
 
+//  Triangle t=Triangle();
+//     t.diameter1=6;
+//     t.diameter2=8;
+//     print("area of the triangle is ${t.area()}");
+// }
+
+// polymorphisum
+
+// class Animal{
+//     void eat(){
+//         print("Animal is eating...");
+//     }
+// }
+// class Dog extends Animal{
+//     @override
+//   void eat(){
+//     print("Dog is eating...");
+//   }
+//   }
+// void main(){
+//     Animal a = Animal();
+//     a.eat();
+//     Dog d = Dog();
+//     d.eat();
+// }
+
+//employee
+
+// class Employee {
+//   void salary() {
+//     print("Salary of employee is 15000");
+//   }
+// }
+// class Manager extends Employee {
+//   @override
+//   void salary() {
+//     print("Salary of manager is 20000");
+//   }
+// }
+// class Developer extends Employee {
+//   @override
+//   void salary() {
+//     print("Salary of developer is 35000");
+//   }
+// }
+// void main() {
+//   Employee emp = Employee();
+//   emp.salary();
+//   Manager m = Manager();
+//   m.salary();
+//   Developer d = Developer();
+//   d.salary();
+// }
+
+//capsualtion
+
+// class Employee{
+//     int?_id;
+//     String?_name;
+
+// int getId(){
+//     return _id!;
+//     }
+// String getName(){
+
+//     return _name!;
+// }
+
+// void setId(int id)
+// {
+// this._id=id;
+// }
+// void setName(String name){
+// this._name=name;
+// }
+// }
+// void main(){
+//     Employee emp=Employee();
+//     emp.setId(1);
+//     emp.setName("athira");
+// print("employee id:${emp.getId()}");
+// print("employee name:${emp.getName()}");
+// }
+
+// class BankAccount{
+//     double? _balance;
+//     BankAccount(this._balance);
+//     double getBalance(){
+//     return _balance!;
+//     }
+// void deposit(double amount){
+//     if(amount > 0){
+//         _balance = _balance !+ amount;
+//     }
+// }
+// void withdraw(double amount){
+//     if(amount > 0 && amount <= _balance!){
+//         _balance = _balance !- amount;
+//     }
+// }
+// }
+// void main(){
+//     BankAccount bk=BankAccount(1500);
+//     print("initial balance:${bk.getBalance()}");
+//     bk.deposit(1500);
+//     print("balance after deposit:${bk.getBalance()}");
+//     bk.withdraw(500);
+//     print("balance after withdrawl:${bk.getBalance()}");
+// }
+
+//abstract
+
+// abstract class Animal{
+//     void makesound();
+//     void sleep(){
+//         print("Zzz");
+//         }
+//     }
+// class Dog extends Animal{
+// @override
+// void makesound(){
+//     print("Woof");
+// }
+// }
+// class Cat extends Animal{
+// @override
+// void makesound(){
+//     print("Meow");
+// }
+// }
+// void main(){
+//     Dog d=Dog();
+//     Cat c=Cat();
+//     d.makesound();
+//     d.sleep();
+//     c.makesound();
+//     c.sleep();
+// }
